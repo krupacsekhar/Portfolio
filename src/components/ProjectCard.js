@@ -2,11 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
-import projImg1 from "../assets/img/project-img1.png";
 
-
-
-export const ProjectCard = ({ title, skills, description, imgArray, progress, layout }) => {
+export const ProjectCard = ({ title, skills, description, imgArray, progress, layout, yt }) => {
   const imageItems = (imgArray.length > 1) ?
     imgArray.map((image) => {
       return (
@@ -34,9 +31,9 @@ export const ProjectCard = ({ title, skills, description, imgArray, progress, la
   const fullLayout =
     layout === 0 ? (
       <Row>
-        <Col sm={4}>{images}</Col>
+        <Col sm={4}>{images} </Col>
         <Col sm={8}>
-          <div className='h1'>{title} {progress}</div>
+          <div className='h1'>{title} <img src={progress} alt="progress" /></div>
 
           <div className='proj-skills'>{skills}</div>
           <div className='proj-desc'>{description}</div>
@@ -44,7 +41,7 @@ export const ProjectCard = ({ title, skills, description, imgArray, progress, la
       </Row>) :
       (<Row>
         <Col sm={8}>
-          <div className='h1'>{title} {progress}</div>
+          <div className='h1'>{title} <img src={progress} alt="progress" /></div>
 
           <div className='proj-skills'>{skills}</div>
           <div className='proj-desc'>{description}</div>

@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from '../assets/img/header-img.svg';
+import butterflies from '../assets/img/butterflies.svg';
 import { useState, useEffect } from "react";
 import Nav from 'react-bootstrap/Nav';
 
@@ -56,7 +57,7 @@ export const Banner = () => {
                         ><Nav.Link href="#skills" onClick={() => onUpdateActiveLink('skills')}>Let's go!</Nav.Link><ArrowRightCircle size={25} /></button>
 
                     </Col>
-                    <Col xs={12} md={6} xl={5}><img src={headerImg} alt="Header Img" /></Col>
+                    <Col xs={12} md={6} xl={5}><img src={butterflies} style={{ height: 800, width: 500 }} alt="Header Img" /></Col>
                 </Row>
             </Container>
         </section>

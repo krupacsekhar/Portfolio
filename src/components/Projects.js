@@ -4,6 +4,9 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import { ProjectCard } from "./ProjectCard";
+import zero_prog from '../assets/img/zero_prog.svg';
+import in_prog from '../assets/img/in_prog.svg';
+import done_prog from '../assets/img/done_prog.svg';
 
 export const Projects = () => {
   const tech = [
@@ -12,16 +15,9 @@ export const Projects = () => {
       description: "PTSD Training Simulator",
       skills: "Unity • C#",
       imgArray: [projImg1, projImg2],//change
-      progress: 50,
-      layout: 0
-    },
-    {
-      title: "Virtual Reality",
-      description: "PTSD Training Simulator",
-      skills: "Unity • C#",
-      imgArray: [projImg1],//change
-      progress: 50,
-      layout: 1
+      progress: done_prog,
+      layout: 0,
+      yt: ""
     },
   ];
 

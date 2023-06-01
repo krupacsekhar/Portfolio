@@ -5,6 +5,7 @@ import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import gitIcon from '../assets/img/giticon.svg';
 import cvIcon from '../assets/img/cv_icon.svg';
+
 import { useEffect, useState } from 'react';
 
 
