@@ -4,6 +4,7 @@ import headerImg from '../assets/img/header-img.svg';
 import butterflies from '../assets/img/butterflies.svg';
 import { useState, useEffect } from "react";
 import Nav from 'react-bootstrap/Nav';
+import about from '../assets/img/about.svg';
 
 
 export const Banner = () => {
@@ -52,12 +53,14 @@ export const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <h1>{"Hi! I'm Krupa, "}<span className="wrap">{text}</span></h1>
-                        <p>About me.........</p>
+                        <p > <i>I love to create.</i> <br></br> <br></br>Whether I’m coding an app, designing a website, sketching, or performing on stage, I create to augment and savor the human experience.
+
+                            I focus on making beautiful, challenging, sustainable work that prioritizes impact and tackles pertinent issues like human health, education, and social justice. I hope you enjoy learning more about me and my work!</p>
                         <button onClick={() => onUpdateActiveLink('skills')}
                         ><Nav.Link href="#skills" onClick={() => onUpdateActiveLink('skills')}>Let's go!</Nav.Link><ArrowRightCircle size={25} /></button>
 
                     </Col>
-                    <Col xs={12} md={6} xl={5}><img src={butterflies} style={{ height: 800, width: 500 }} alt="Header Img" /></Col>
+                    <Col xs={12} md={6} xl={5}><img className="banner-anim" src={butterflies} style={{ height: 800, width: 500 }} alt="Header Img" /></Col>
                 </Row>
             </Container>
         </section>
