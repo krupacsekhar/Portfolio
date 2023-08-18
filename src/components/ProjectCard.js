@@ -5,50 +5,75 @@ import Carousel from 'react-bootstrap/Carousel';
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import hyperlink from '../assets/img/hyperlink.svg';
+import gitIcon from '../assets/img/giticon.svg';
 
 
-
-export const ProjectCard = ({ title, skills, description, imgArray, progress, layout, yt, location, link }) => {
+export const ProjectCard = ({ title, skills, description, imgArray, progress, layout, yt, location, link, git }) => {
   const [showPopup, setShowPopup] = useState(false);
   const handlePopupToggle = () => {
     setShowPopup(!showPopup);
   };
 
-  const imageItems = (imgArray.length > 1) ?
-    imgArray.map((image) => {
+  const imageItems = imgArray.length > 1 ? (
+    imgArray.map((item, index) => {
+      // Check if the item is a video format (string) or an image (variable name)
+      const isVideo = typeof item === 'string' && (item.endsWith('.mp4') || item.endsWith('.avi') || item.endsWith('.mov'));
+
       return (
-        <Carousel.Item>
-
-          <img
-            className="proj-imgbx"
-            src={image}
-            alt="image"
-            onClick={handlePopupToggle}
-          />
-
+        <Carousel.Item key={index}>
+          {isVideo ? (
+            <video
+              className="proj-imgbx"
+              controls
+              onClick={handlePopupToggle}
+            >
+              <source src={item} type={`video/${item.substr(item.lastIndexOf('.') + 1)}`} />
+            </video>
+          ) : (
+            <img
+              className="proj-imgbx"
+              src={item}
+              alt="image"
+              onClick={handlePopupToggle}
+            />
+          )}
         </Carousel.Item>
       );
     })
-    : (imgArray.map((image) => {
-      return (
-        <div className="proj-imgbx">
-          <img
-            src={image}
-            alt="image"
-            onClick={handlePopupToggle}
-          />
+  ) : (
+    imgArray.map((item, index) => {
+      // Check if the item is a video format (string) or an image (variable name)
+      const isVideo = typeof item === 'string' && (item.endsWith('.mp4') || item.endsWith('.avi') || item.endsWith('.mov'));
 
+      return (
+        <div className="proj-imgbx" key={index}>
+          {isVideo ? (
+            <video
+              controls
+              onClick={handlePopupToggle}
+            >
+              <source src={item} type={`video/${item.substr(item.lastIndexOf('.') + 1)}`} />
+            </video>
+          ) : (
+            <img
+              src={item}
+              alt="image"
+              onClick={handlePopupToggle}
+            />
+          )}
         </div>
       );
-    }))
+    })
+  );
+
 
   const imagesContainer = (
     <div className="image-container">
       {imgArray.length > 1 ? (
-        <Carousel sx={{ marginTop: "25px" }}>{imageItems}</Carousel>
+        <Carousel sx={{ marginTop: "30px" }}>{imageItems}</Carousel>
       ) : (
         <div className="proj-imgbx">
-          <img src={imgArray[0]} onClick={handlePopupToggle} />
+          <img src={imgArray[0]} onClick={handlePopupToggle} sx={{ maxHeight: "40%" }} />
         </div>
       )}
 
@@ -77,19 +102,24 @@ export const ProjectCard = ({ title, skills, description, imgArray, progress, la
     <a href={link}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a>
   </div>)
 
+  const githubIcon = git === "" ? (<div></div>) : (<div className="social-icon">
+    <a href={git}><img src={gitIcon} style={{ height: 20, width: 40 }} alt="link" /></a>
+  </div>)
+
   const fullLayout =
     layout === 0 ? (
       <Row>
         <Col sm={12}>
           <div className="h1">
             {title} <img src={progress} alt="progress" />
-            <div className="social-icon">{linkIcon}</div>
+            <div className="project-icon">{linkIcon}</div>
+            <div className="project-icon">{githubIcon}</div>
 
           </div>
           <div className="proj-location">{location}</div>
           <div className="proj-skills">{skills}</div>
         </Col>
-        <Col sm={5}>{imagesContainer}</Col>
+        <Col sm={5} sx={{ marginTop: "40px" }}>{imagesContainer}</Col>
         <Col sm={7}>
 
           <div className="full-width-description">
@@ -102,6 +132,8 @@ export const ProjectCard = ({ title, skills, description, imgArray, progress, la
         <Col sm={12}>
           <div className="h1">
             {title} <img src={progress} alt="progress" />
+            <div className="project-icon">{linkIcon}</div>
+            <div className="project-icon">{githubIcon}</div>
           </div>
           <div className="proj-location">{location}</div>
           <div className="proj-skills">{skills}</div>

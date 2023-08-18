@@ -9,14 +9,34 @@ export const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
-          <Col size={12} sm={6}>
+          <Col size={12} sm={4}>
             <p>Contact me at kcs76@cornell.edu</p>
           </Col>
-          <Col size={12} sm={6} className="text-center text-sm-end">
+          <Col size={12} sm={4} className="" align-items-center>
+            <p>
+              I coded this website myself!{" "}
+              <a
+                href="https://github.com/krupacsekhar/Portfolio"
+                style={{
+                  color: "lightgrey",
+                  transition: "color 0.3s",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.color = "darkgrey";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = "lightgrey";
+                }}
+              >
+                See my code here.
+              </a>
+            </p>
+          </Col>
+          <Col size={12} sm={4} className="text-center text-sm-end">
             <p>Copyright 2023. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
     </footer>
-  )
-}
+  );
+};
