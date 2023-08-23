@@ -12,7 +12,7 @@ cd build
 git init
 git add -A
 git commit -m "Deploy to GitHub Pages"
-git push -f https://github.com/krupacsekhar/portfolio.git main:gh-pages
+git push -f https://github.com/krupacsekhar/Portfolio.git main:gh-pages
 
 # Clean up
 cd ..
