@@ -73,7 +73,7 @@ export const ProjectCard = ({ title, skills, description, imgArray, progress, la
         <Carousel sx={{ marginTop: "30px" }}>{imageItems}</Carousel>
       ) : (
         <div className="proj-imgbx">
-          <img src={imgArray[0]} onClick={handlePopupToggle} sx={{ maxHeight: "40%" }} />
+          <img src={imgArray[0]} onClick={handlePopupToggle} />
         </div>
       )}
 
