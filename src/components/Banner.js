@@ -52,7 +52,7 @@ export const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <h1>{"Hi! I'm Krupa, "}<span className="wrap">{text}</span></h1>
+                        <h1>{"Hi! I'm Krupa Sekhar, "}<span className="wrap">{text}</span></h1>
                         <p > <i>I love to create.</i> <br></br> <br></br>Whether I’m coding an app, designing a website, sketching, or performing on stage, I create to augment and savor the human experience.
 
                             I focus on making beautiful, challenging, sustainable work that prioritizes impact and tackles pertinent issues like human health, education, and social justice. I hope you enjoy learning more about me and my work!</p>
