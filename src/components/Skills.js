@@ -45,7 +45,7 @@ export const Skills = () => {
                   <img src={hard_skills} style={{ height: 50, width: 50 }} alt="Hard Skills" />
                   <h5> </h5>
                   <h5>Hard Skills</h5>
-                  <p1>Ocaml • Python • R • Java • CSS • JavaScript (React & React Native) • C++ • Figma • Git</p1>
+                  <p1>GIS • Sketching • Ocaml • Python • R • Java • CSS • JavaScript (React & React Native) • C++ • Figma • Git</p1>
                 </div>
                 <div class="col-xs-6 col-sm-6">
                   <img src={soft_skills} style={{ height: 50, width: 40 }} alt="Soft Skills" />
