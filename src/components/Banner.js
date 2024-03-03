@@ -14,7 +14,7 @@ export const Banner = () => {
     }
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["software developer!", "artist!", "designer!"]
+    const toRotate = ["writer!", "artist!", "designer!", "software developer"]
     const [text, setText] = useState('');
     const period = 1000; //how much time passess between letters being typed out
     const [delta, setDelta] = useState(300 - Math.random() * 300);
@@ -52,10 +52,10 @@ export const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <h1>{"Hi! I'm Krupa Sekhar, "}<span className="wrap">{text}</span></h1>
-                        <p > <i>I love to create.</i> <br></br> <br></br>Whether I’m coding an app, designing a website, sketching, or performing on stage, I create to augment and savor the human experience.
+                        <h1>{"Hi! I'm Krupa, "}<span className="wrap">{text}</span></h1>
+                        <p > <i>I love to create.</i> <br></br> <br></br>Whether I’m writing, directing a photoshoot, sketching, or performing on stage, I create to celebrate the human experience.
 
-                            I focus on making beautiful, challenging, sustainable work that prioritizes impact and tackles pertinent issues like human health, education, and social justice. I hope you enjoy learning more about me and my work!</p>
+                            I focus on making beautiful, challenging, sustainable work that prioritizes impact and tackles pertinent issues like health, sustainability, and social justice. I hope you enjoy learning more about me and my work!</p>
                         <button onClick={() => onUpdateActiveLink('skills')}
                         ><Nav.Link href="#skills" onClick={() => onUpdateActiveLink('skills')}>Let's go!</Nav.Link><ArrowRightCircle size={25} /></button>
 

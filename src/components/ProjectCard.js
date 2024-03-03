@@ -98,7 +98,11 @@ export const ProjectCard = ({ title, skills, description, imgArray, progress, la
     return <div className='full-width-description' key={index}>{paragraph}</div>;
   });
 
-  const linkIcon = link === "" ? (<div></div>) : (<div className="social-icon">
+  const linkIcon = link.length > 1 ? (link.length === 3 ? (<div className="social-icon">
+    <a href={link[0]}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a> <a href={link[1]}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a> <a href={link[2]}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a>
+  </div>) : (<div className="social-icon">
+    <a href={link[0]}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a> <a href={link[1]}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a>
+  </div>)) : (link === "" ? (<div></div>) : <div className="social-icon">
     <a href={link}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a>
   </div>)
 
