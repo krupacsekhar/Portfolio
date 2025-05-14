@@ -123,6 +123,55 @@ export const Projects = () => {
 
   const art = [
     {
+      title: "Fine Arts",
+      description: "I love all kinds of art. Here are some sketches and paintings I've worked on. I focus on portraiture and architectural pencil and ink sketches, and aim to capture and communicate a story through my subjects. \n In terms of painting, I use acrylics and have recently begun dabbling in watercolor.",
+      skills: "",
+      imgArray: [sketch_1, sketch_3, paintings, sketch_4, faces],//change
+      progress: blank_prog,
+      layout: 1,
+      yt: "",
+      link: "",
+      git: "",
+      location: ""
+    },
+    {
+      title: "Digital Art & Animation",
+      description: "I draw using Procreate",
+      skills: "",
+      imgArray: [sketch_1, sketch_3, paintings, sketch_4, faces],//change
+      progress: blank_prog,
+      layout: 1,
+      yt: "",
+      link: "",
+      git: "",
+      location: ""
+    },
+    {
+      title: "Music Composition",
+      description: "I have composed music.",
+      skills: "",
+      imgArray: [sketch_1, sketch_3, paintings, sketch_4, faces],//change
+      progress: blank_prog,
+      layout: 1,
+      yt: "",
+      link: "",
+      git: "",
+      location: ""
+    },
+    {
+      title: "Violin & Dance",
+      description: "I have been playing Indian Classical violin and dancing Bharatanatyam since I was 5! \n I perform violin regularly across the United States and in India. I play solo concerts, accompany vocal artists, and play for dance programs. I play in the Carnatic style, a South Indian music form that centers around two concepts: Shruti (melody) and Laya (rhythm). Lyric-based devotional songs and melodic scales (ragas) are elaborated upon through various forms of improvisation (manodharma). These forms include Alapana, free-flowing raga exploration, Tanam, more rhythm-based swara (note) pattern improvisation, niraval, improvisation on a line of a song, and kalpana swarams, more mathematical exploration that fits into a talam (similar to a time signature). \n Bharatanatyam is one of the oldest classical dance forms of South India. It is a sacred art, performed and nurtured in the temples. Bharathanatyam has four components: Bha- Bhavam (expressions), Ra- Ragam (melody), Tha- Thalam (rhythm), and Natyam (dramatic performance). I completed my dance arangetram (roughly translated to 'graduation') in 2019, and enjoy dancing to this day. \n I have won international awards in both violin and dance. For more information about these art forms, as well as videos of my performances, click on the link icon above!",
+      skills: "Performance • Improvisation • Choreography • Acting",
+      imgArray: [violin_1, dance_1, dance_2],//change
+      layout: 1,
+      link: ["https://krupacsekhar.wixsite.com/portfolio"],
+      progress: blank_prog,
+      git: "",
+    }
+  ];
+
+  const design = [
+    {
       title: "Set Design",
       description: "I was set designer for a Cornell immersive film installation: THEM. The installation is comprised of a room and a two-paneled projection in the center of the space. This set had to be used both for the filming process, and as a live set that visitors could interact with while watching the films. In addition, the set had to be versatile enough to accomodate four distinct short films, with diverse characters and moods (middle aged bachelors, a young couple, best friends in an argument). After reading the scripts, I recognized common themes of home, nostalgia, and companionship, and chose a warm, earthy color palette and soft, lived-in furniture. We sourced all furniture and props from the Ithaca reuse center, and used paneling and wallpaper to make the space feel lived-in. Our final installation manifested as a needed reprieve from the monotony of university life, allowing visitors to experience the film as if they are living it.",
       skills: "",
@@ -135,12 +184,24 @@ export const Projects = () => {
       location: ""
     },
     {
-      title: "Fine Arts",
-      description: "I love all kinds of art. Here are some sketches and paintings I've worked on. I focus on portraiture and architectural pencil and ink sketches, and aim to capture and communicate a story through my subjects. \n In terms of painting, I use acrylics and have recently begun dabbling in watercolor.",
+      title: "The Jasmine Dragon",
+      description: "Blurb",
       skills: "",
-      imgArray: [sketch_1, sketch_3, paintings, sketch_4, faces],//change
+      imgArray: [them1, them2, them3, them4, them5, them6],//change
       progress: blank_prog,
-      layout: 1,
+      layout: 0,
+      yt: "",
+      link: "",
+      git: "",
+      location: ""
+    },
+    {
+      title: "Bonsai World",
+      description: "Blurb",
+      skills: "",
+      imgArray: [them1, them2, them3, them4, them5, them6],//change
+      progress: blank_prog,
+      layout: 0,
       yt: "",
       link: "",
       git: "",
@@ -157,16 +218,6 @@ export const Projects = () => {
       link: "",
       git: "",
       location: ""
-    },
-    {
-      title: "Violin & Dance",
-      description: "I have been playing Indian Classical violin and dancing Bharatanatyam since I was 5! \n I perform violin regularly across the United States and in India. I play solo concerts, accompany vocal artists, and play for dance programs. I play in the Carnatic style, a South Indian music form that centers around two concepts: Shruti (melody) and Laya (rhythm). Lyric-based devotional songs and melodic scales (ragas) are elaborated upon through various forms of improvisation (manodharma). These forms include Alapana, free-flowing raga exploration, Tanam, more rhythm-based swara (note) pattern improvisation, niraval, improvisation on a line of a song, and kalpana swarams, more mathematical exploration that fits into a talam (similar to a time signature). \n Bharatanatyam is one of the oldest classical dance forms of South India. It is a sacred art, performed and nurtured in the temples. Bharathanatyam has four components: Bha- Bhavam (expressions), Ra- Ragam (melody), Tha- Thalam (rhythm), and Natyam (dramatic performance). I completed my dance arangetram (roughly translated to 'graduation') in 2019, and enjoy dancing to this day. \n I have won international awards in both violin and dance. For more information about these art forms, as well as videos of my performances, click on the link icon above!",
-      skills: "Performance • Improvisation • Choreography • Acting",
-      imgArray: [violin_1, dance_1, dance_2],//change
-      layout: 1,
-      link: ["https://krupacsekhar.wixsite.com/portfolio"],
-      progress: blank_prog,
-      git: "",
     }
   ];
 
@@ -219,13 +270,16 @@ export const Projects = () => {
             <Tab.Container id="projects-tabs" defaultActiveKey="arts">
               <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
-                  <Nav.Link eventKey="tech">Tech & UX</Nav.Link>
+                  <Nav.Link eventKey="tech">Tech</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="arts">Arts & Design</Nav.Link>
+                  <Nav.Link eventKey="arts">Arts</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="more">Writing & Research</Nav.Link>
+                  <Nav.Link eventKey="design">Design</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="more">Writing</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
@@ -247,6 +301,19 @@ export const Projects = () => {
                   <Row>
                     {
                       art.map((project, index) => {
+                        return (
+                          <ProjectCard
+                            key={index}
+                            {...project}
+                          />
+                        )
+                      })
+                    }
+                  </Row>                </Tab.Pane>
+                <Tab.Pane eventKey="design">
+                  <Row>
+                    {
+                      design.map((project, index) => {
                         return (
                           <ProjectCard
                             key={index}
