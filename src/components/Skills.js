@@ -45,15 +45,15 @@ export const Skills = () => {
                   <img src={hard_skills} style={{ height: 50, width: 50 }} alt="Hard Skills" />
                   <h5> </h5>
                   <h5>Hard Skills</h5>
-                  <p1>QGIS • Figma • Ocaml • Python • R • Java • CSS • HTML • JavaScript (React) • Git</p1>
+                  <p1>Sketchup 3D • AutoCad • Figma • Vectorworks •<br /> ProTools • Procreate • Canva • Video Editing •<br />Python • HTML/CSS • Java • React.js</p1>
                   <br />
-                  <p1> <i>Currently Learning: Blender • Adobe Suite • Sketchup</i></p1>
+                  <p1> <i>Currently Learning: Blender • Adobe Suite • Enscape</i></p1>
                 </div>
                 <div class="col-xs-6 col-sm-6">
                   <img src={soft_skills} style={{ height: 50, width: 40 }} alt="Soft Skills" />
                   <h5> </h5>
                   <h5>Soft Skills</h5>
-                  <p1>Writing • Sketching • Creative Direction • Public Speaking • <br />Project Management • Adaptability • Creativity • <br />Problem Solving</p1>
+                  <p1>Writing • Sketching • Creative Direction • Public Speaking • <br />Project Management • Adaptability • Creativity • <br />Problem Solving • Communication</p1>
                 </div>
               </Row>
             </div>

@@ -1,115 +1,152 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Carousel from 'react-bootstrap/Carousel';
 import React, { useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import { Container, Row, Col, Carousel, Modal } from 'react-bootstrap';
 import hyperlink from '../assets/img/hyperlink.svg';
 import gitIcon from '../assets/img/giticon.svg';
 
-
-export const ProjectCard = ({ title, skills, description, imgArray, progress, layout, yt, location, link, git }) => {
+/**
+ * ProjectCard Component
+ * Displays a project's title, images/videos (with modal), description, and links
+ */
+export const ProjectCard = ({
+  title,
+  skills,
+  description,
+  imgArray,
+  progress,
+  layout,
+  location,
+  link,
+  git,
+}) => {
   const [showPopup, setShowPopup] = useState(false);
-  const handlePopupToggle = () => {
-    setShowPopup(!showPopup);
+
+  // Handle modal open/close
+  const handlePopupToggle = () => setShowPopup(!showPopup);
+
+  // Helper function to check if a media file is a video
+  const isVideoFile = (filename) => {
+    return typeof filename === 'string' && /\.(mp4|mov|avi)$/i.test(filename);
+  };
+  const isYouTubeUrl = (url) => {
+    return typeof url === 'string' && /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\//.test(url);
   };
 
-  const imageItems = imgArray.length > 1 ? (
-    imgArray.map((item, index) => {
-      // Check if the item is a video format (string) or an image (variable name)
-      const isVideo = typeof item === 'string' && (item.endsWith('.mp4') || item.endsWith('.avi') || item.endsWith('.mov'));
+  // Renders media (image or video) with optional onClick
+  const renderMedia = (item, index, triggerPopup = false) => {
+    const isVideo = isVideoFile(item);
+    const isYouTube = isYouTubeUrl(item);
 
-      return (
-        <Carousel.Item key={index}>
-          {isVideo ? (
-            <video
-              className="proj-imgbx"
-              controls
-              onClick={handlePopupToggle}
-            >
-              <source src={item} type={`video/${item.substr(item.lastIndexOf('.') + 1)}`} />
-            </video>
-          ) : (
-            <img
-              className="proj-imgbx"
-              src={item}
-              alt="image"
-              onClick={handlePopupToggle}
-            />
-          )}
-        </Carousel.Item>
+    if (isYouTube) {
+      // Extract YouTube video ID from URL
+      const videoIdMatch = item.match(
+        /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/
       );
-    })
-  ) : (
-    imgArray.map((item, index) => {
-      // Check if the item is a video format (string) or an image (variable name)
-      const isVideo = typeof item === 'string' && (item.endsWith('.mp4') || item.endsWith('.avi') || item.endsWith('.mov'));
+      const videoId = videoIdMatch ? videoIdMatch[1] : null;
+
+      if (!videoId) return null; // invalid YouTube link
+
+      const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=0&mute=1&loop=1&playlist=${videoId}`;
 
       return (
-        <div className="proj-imgbx" key={index}>
-          {isVideo ? (
-            <video
-              controls
-              onClick={handlePopupToggle}
-            >
-              <source src={item} type={`video/${item.substr(item.lastIndexOf('.') + 1)}`} />
-            </video>
-          ) : (
-            <img
-              src={item}
-              alt="image"
-              onClick={handlePopupToggle}
-            />
-          )}
+        <div key={index} style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+          <iframe
+            src={embedUrl}
+            title={`YouTube video ${videoId}`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+          ></iframe>
         </div>
       );
-    })
-  );
+    }
 
 
+    if (isVideo) {
+      return (
+        <video
+          key={index}
+          controls
+          style={{ width: '100%' }}
+          onClick={triggerPopup ? handlePopupToggle : undefined}
+          autoPlay
+          muted
+          loop
+        >
+          <source src={item} type={`video/${item.split('.').pop()}`} />
+          Your browser does not support the video tag.
+        </video>
+      );
+    }
+
+    return (
+      <img
+        key={index}
+        src={item}
+        alt={`media-${index}`}
+        style={{ width: '100%' }}
+        onClick={triggerPopup ? handlePopupToggle : undefined}
+      />
+    );
+  };
+
+  // Carousel or single media preview
   const imagesContainer = (
     <div className="image-container">
       {imgArray.length > 1 ? (
-        <Carousel sx={{ marginTop: "30px" }}>{imageItems}</Carousel>
+        <Carousel>
+          {imgArray.map((item, index) => (
+            <Carousel.Item key={index}>
+              {renderMedia(item, index, true)}
+            </Carousel.Item>
+          ))}
+        </Carousel>
       ) : (
-        <div className="proj-imgbx">
-          <img src={imgArray[0]} onClick={handlePopupToggle} />
-        </div>
+        <div className="proj-imgbx">{renderMedia(imgArray[0], 0, true)}</div>
       )}
 
-      <Modal
-        show={showPopup}
-        onHide={handlePopupToggle}
-        centered
-        dialogClassName="popup-card"
-      >
+      {/* Popup Modal for full-size view */}
+      <Modal show={showPopup} onHide={handlePopupToggle} centered dialogClassName="popup-card">
         <Modal.Body>
-          {imgArray.map((image, index) => (
-            <img key={index} src={image} alt={`Slide ${index}`} />
-          ))}
+          {imgArray.map((item, index) => renderMedia(item, index))}
         </Modal.Body>
       </Modal>
-
-
     </div>
   );
 
-  const descriptionParagraphs = description.split('\n').map((paragraph, index) => {
-    return <div className='full-width-description' key={index}>{paragraph}</div>;
-  });
+  // Formats multi-paragraph description
+  const descriptionParagraphs = description.split('\n').map((para, index) => (
+    <div className="full-width-description" key={index}>
+      {para}
+    </div>
+  ));
 
-  const linkIcon = link.length > 1 ? (link.length === 3 ? (<div className="social-icon">
-    <a href={link[0]}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a> <a href={link[1]}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a> <a href={link[2]}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a>
-  </div>) : (<div className="social-icon">
-    <a href={link[0]}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a> <a href={link[1]}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a>
-  </div>)) : (link === "" ? (<div></div>) : <div className="social-icon">
-    <a href={link}><img src={hyperlink} style={{ height: 20, width: 40 }} alt="link" /></a>
-  </div>)
+  // Render link icons (external links or GitHub)
+  const linkIcon = Array.isArray(link) ? (
+    <div className="social-icon">
+      {link.map((l, i) => (
+        <a key={i} href={l} target="_blank" rel="noreferrer">
+          <img src={hyperlink} alt="link" style={{ height: 20, width: 40 }} />
+        </a>
+      ))}
+    </div>
+  ) : link ? (
+    <div className="social-icon">
+      <a href={link} target="_blank" rel="noreferrer">
+        <img src={hyperlink} alt="link" style={{ height: 20, width: 40 }} />
+      </a>
+    </div>
+  ) : null;
 
-  const githubIcon = git === "" ? (<div></div>) : (<div className="social-icon">
-    <a href={git}><img src={gitIcon} style={{ height: 20, width: 40 }} alt="link" /></a>
-  </div>)
+  const githubIcon = git ? (
+    <div className="social-icon">
+      <a href={git} target="_blank" rel="noreferrer">
+        <img src={gitIcon} alt="github" style={{ height: 20, width: 40 }} />
+      </a>
+    </div>
+  ) : null;
 
+  // Layout options
   const fullLayout =
     layout === 0 ? (
       <Row>
@@ -118,18 +155,16 @@ export const ProjectCard = ({ title, skills, description, imgArray, progress, la
             {title} <img src={progress} alt="progress" />
             <div className="project-icon">{linkIcon}</div>
             <div className="project-icon">{githubIcon}</div>
-
           </div>
           <div className="proj-location">{location}</div>
           <div className="proj-skills">{skills}</div>
         </Col>
-        <Col sm={5} sx={{ marginTop: "40px" }}>{imagesContainer}</Col>
-        <Col sm={7}>
-
-          <div className="full-width-description">
-            {descriptionParagraphs}
-          </div>
+        <Col sm={5} style={{ marginTop: '10px' }}>
+          {imagesContainer}
         </Col>
+
+        <Col sm={7}>
+          {descriptionParagraphs}</Col>
       </Row>
     ) : (
       <Row>
@@ -142,26 +177,12 @@ export const ProjectCard = ({ title, skills, description, imgArray, progress, la
           <div className="proj-location">{location}</div>
           <div className="proj-skills">{skills}</div>
         </Col>
-        <Col sm={7}>
-
-          <div className="full-width-description">{descriptionParagraphs}</div>
+        <Col sm={7}>{descriptionParagraphs}</Col>
+        <Col sm={5} className="carousel-holder">
+          {imagesContainer}
         </Col>
-        <Col sm={5} className="carousel-holder">{imagesContainer}</Col>
       </Row>
     );
 
-
-  const fullLayoutWithBox = (
-    <div className="layout-box">
-      {fullLayout}
-    </div>
-  );
-
-  return (
-    <Container>
-      {fullLayoutWithBox}
-    </Container>
-  );
-
-
-}
+  return <Container className="layout-box">{fullLayout}</Container>;
+};

@@ -7,11 +7,10 @@ import cvIcon from '../assets/img/cv_icon.svg';
 export const Footer = () => {
   return (
     <footer className="footer">
+      <div style={{ height: '1rem' }} /> {/* spacer */}
+
       <Container>
         <Row className="align-items-center">
-          <Col size={12} sm={4}>
-            <p>Contact me at kcs76@cornell.edu</p>
-          </Col>
           <Col size={12} sm={4} className="" align-items-center>
             <p>
               I coded this website myself!{" "}
@@ -32,8 +31,10 @@ export const Footer = () => {
               </a>
             </p>
           </Col>
+          <Col size={8} sm={4}>
+          </Col>
           <Col size={12} sm={4} className="text-center text-sm-end">
-            <p>Copyright 2024. All Rights Reserved</p>
+            <p>Copyright 2025. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>

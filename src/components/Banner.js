@@ -4,7 +4,7 @@ import headerImg from '../assets/img/header-img.svg';
 import butterflies from '../assets/img/butterflies.svg';
 import { useState, useEffect } from "react";
 import Nav from 'react-bootstrap/Nav';
-import about from '../assets/img/about.svg';
+import profile from '../assets/img/profile.svg';
 
 
 export const Banner = () => {
@@ -14,7 +14,7 @@ export const Banner = () => {
     }
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["writer!", "artist!", "designer!", "software developer"]
+    const toRotate = ["writer!", "artist!", "designer!", "engineer!"]
     const [text, setText] = useState('');
     const period = 1000; //how much time passess between letters being typed out
     const [delta, setDelta] = useState(300 - Math.random() * 300);
@@ -52,10 +52,11 @@ export const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <h1>{"Hi! I'm Krupa, "}<span className="wrap">{text}</span></h1>
-                        <p > <i>I love to create.</i> <br></br> <br></br>Whether I’m writing, directing a photoshoot, sketching, or performing on stage, I create to celebrate the human experience.
+                        <h1>
+                            {"Hi! I'm Krupa, "}<span className="wrap">{text}</span></h1>
+                        <p > <i>I love to create.</i> <br></br> <br></br>Whether I’m designing a space, writing a poem, sketching, or performing on stage, I create to celebrate the human experience.
 
-                            I focus on making beautiful, challenging, sustainable work that prioritizes impact and tackles pertinent issues like health, sustainability, and social justice. I hope you enjoy learning more about me and my work!</p>
+                            I focus on making beautiful, challenging, sustainable work that centers cultural integrity, resilience, and interconnection. I hope you enjoy learning more about me and my work!</p>
                         <button onClick={() => onUpdateActiveLink('skills')}
                         ><Nav.Link href="#skills" onClick={() => onUpdateActiveLink('skills')}>Let's go!</Nav.Link><ArrowRightCircle size={25} /></button>
 

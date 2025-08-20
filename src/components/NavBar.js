@@ -5,6 +5,10 @@ import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import gitIcon from '../assets/img/giticon.svg';
 import cvIcon from '../assets/img/cv_icon.svg';
+import instaIcon from '../assets/img/insta.svg';
+import smIcon from '../assets/img/smIcon.svg';
+
+
 
 import { useEffect, useState } from 'react';
 
@@ -43,15 +47,16 @@ export const NavBar = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                         <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
                         <Nav.Link href="#project" className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('project')}>Projects</Nav.Link>
+                        <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contact</Nav.Link>
+
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
                             <a href="https://www.linkedin.com/in/krupa--sekhar/"><img src={navIcon1} style={{ height: 20, width: 40 }} alt="LinkedIn" /></a>
-                            <a href="https://drive.google.com/file/d/1uz-oBhv3-cQVq1EDrS346aABTXlGBQ_9/view?usp=sharing"><img src={cvIcon} style={{ height: 30, width: 40 }} alt="CV" /></a>
-                            <a href="https://github.com/krupacsekhar?tab=repositories"><img src={gitIcon} style={{ height: 20, width: 40 }} alt="Github" /></a>
+                            <a href="https://drive.google.com/file/d/11BXfbLhHScI_REe79XINKJky5GYz-Zej/view?usp=sharing"><img src={cvIcon} style={{ height: 30, width: 40 }} alt="CV" /></a>
+                            <a href="https://linktr.ee/krupacsekhar"><img src={smIcon} style={{ height: 25, width: 45 }} alt="Social Media" /></a>
                         </div>
                     </span>
                 </Navbar.Collapse>

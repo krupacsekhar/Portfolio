@@ -54,6 +54,33 @@ import writing_2 from "../assets/img/writing2.png";
 import writing_3 from "../assets/img/writing_3.png";
 import script from "../assets/img/script.png";
 import ode from "../assets/img/ode.png";
+import thekrupa from "../assets/img/thekrupa.mp4"
+import train from "../assets/img/train.mp4"
+import digiDrawing1 from "../assets/img/digiDrawing1.png"
+import digiDrawing2 from "../assets/img/digiDrawing2.png"
+import digiDrawing3 from "../assets/img/digiDrawing3.png"
+import digiDrawing4 from "../assets/img/digiDrawing4.png"
+import digiDrawing5 from "../assets/img/digiDrawing5.png"
+import digiDrawing6 from "../assets/img/digiDrawing6.png"
+import digiDrawing7 from "../assets/img/digiDrawing7.png"
+import digiDrawing8 from "../assets/img/digiDrawing8.png"
+import harp_and_firefly from "../assets/img/harp_and_firefly.mp4"
+import endless_chase from "../assets/img/endless_chase.mp4"
+import jdragon from "../assets/img/jdragonwalkthrough.mp4"
+import bworld_moodboard from "../assets/img/bworld_moodboard.png"
+import bworld1 from "../assets/img/bworld/1.png"
+import bworld2 from "../assets/img/bworld/2.png"
+import bworld3 from "../assets/img/bworld/3.png"
+import bworld4 from "../assets/img/bworld/4.png"
+import bworld5 from "../assets/img/bworld/5.png"
+import bworld6 from "../assets/img/bworld/6.png"
+import bworld7 from "../assets/img/bworld/7.png"
+import bworld8 from "../assets/img/bworld/8.png"
+import bworld9 from "../assets/img/bworld/9.png"
+import bworld10 from "../assets/img/bworld/10.png"
+import bworld11 from "../assets/img/bworld/11.png"
+import bworld12 from "../assets/img/bworld/12.png"
+
 
 
 
@@ -73,13 +100,13 @@ export const Projects = () => {
     },
     {
       title: "Crowdsourced Heritage Automation Mapping Platform for Sarawak, Malaysia (CHAMPS)",
-      description: "I am developing the full front end for a cultural heritage mapping website, CHAMPS. CHAMPS aims to collect and map cultural heritage within the different communities of the Sarawak region in Malaysia, specifically within the Kuching Division. \n Users include guests and registered users, who will primarily be using CHAMPS via mobile phone. Subsequently, a heritage expert validates submitted information through their own registration portal. By cataloging both tangible and intangible cultural heritage and developing a collaborative platform, CHAMPS seeks to enable the people of Sarawak to explore and share their unique identities with the rest of the world. This website will take a step towards addressing the UNESCO Convention for the Safeguarding of Intangible Cultural Heritage and aid Sarawak’s post-COVID-19 Development Strategy. \n \n While in Sarawak as part of a transdisciplinary research team, I conducted user tests to gather feedback and improve the website so it best serves the interests of all stakeholders. I loved learning about community based design and software development, as well as about and from indigenous communities in Borneo!",
+      description: "I developed the full front end for the first iteration of a Sarawakian cultural heritage website, CHAMPS. CHAMPS aims to collect and map cultural heritage within the different communities of the Sarawak region in Malaysia, specifically within the Kuching Division. \n Users include guests and registered users, who will primarily be using CHAMPS via mobile phone. Subsequently, a heritage expert validates submitted information through their own registration portal. By cataloging both tangible and intangible cultural heritage and developing a collaborative platform, CHAMPS seeks to enable the people of Sarawak to explore and share their unique identities with the rest of the world. This website will take a step towards addressing the UNESCO Convention for the Safeguarding of Intangible Cultural Heritage and aid Sarawak’s post-COVID-19 Development Strategy. \n \n While in Sarawak as part of a transdisciplinary research team, I conducted user tests to gather feedback and improve the website so it best serves the interests of all stakeholders. I loved learning about community based design and software development, as well as about and from indigenous communities in Borneo!",
       skills: "React.js • Figma • Git • CSS • Swagger UI",
       imgArray: [champs_1],//change
       progress: blank_prog,
       layout: 0,
       yt: "",
-      link: ["https://champsreact.azurewebsites.net/home"],
+      link: ["https://www.champs.com.my/"],
       git: "https://github.com/krupacsekhar/champs",
       location: "Lead Frontend Developer"
     },
@@ -124,33 +151,32 @@ export const Projects = () => {
   const art = [
     {
       title: "Fine Arts",
-      description: "I love all kinds of art. Here are some sketches and paintings I've worked on. I focus on portraiture and architectural pencil and ink sketches, and aim to capture and communicate a story through my subjects. \n In terms of painting, I use acrylics and have recently begun dabbling in watercolor.",
-      skills: "",
+      description: "My artistic practice spans a range of fine arts—sculpture, painting, and drawing—though my primary focus lies in acrylic painting and pencil work. I am particularly drawn to portraiture and architectural subjects, approaching each with distinct intentions. \nMy architectural drawings are a form of life drawing, capturing everyday slices of life that resonate with me—quiet streets, lived-in spaces, and fleeting moments—rendered with the aim of preserving their subtle textures and atmospheres. In contrast, my portraiture emerges from imagination, allowing me to explore characters and moods unconstrained by direct observation. \nWhether imagined or observed, each piece becomes an inquiry into how form, texture, and perspective can hold memory, convey narrative, and evoke emotional depth.\n To explore more of my work, visit my Instagram via the link icon above.",
       imgArray: [sketch_1, sketch_3, paintings, sketch_4, faces],//change
       progress: blank_prog,
       layout: 1,
       yt: "",
-      link: "",
+      link: "https://www.instagram.com/world_._builder/",
       git: "",
       location: ""
     },
     {
       title: "Digital Art & Animation",
-      description: "I draw using Procreate",
+      description: "In the digital realm, I work primarily in Procreate, crafting portraits and small-scale animations that bridge my fine arts practice with the boundless possibilities of digital media. This platform allows me to experiment across a spectrum of rendering styles, from subtle, lifelike realism to bold, stylized abstraction, while maintaining the hand-drawn essence at the heart of my practice. Through deliberate layering, nuanced textures, and carefully orchestrated motion, I seek to create works that are both visually arresting and narratively rich, evoking emotion through expression, gesture, and a considered use of color. \nMy artistic focus centers on portraiture, with a particular fascination for imagining characters from diverse, intimate worlds. Each piece becomes an exploration of identity, personality, and expression through visual form. \n To explore more of my work, visit my Instagram via the link icon above.",
       skills: "",
-      imgArray: [sketch_1, sketch_3, paintings, sketch_4, faces],//change
+      imgArray: [thekrupa, digiDrawing1, train, digiDrawing2, digiDrawing3, digiDrawing4, digiDrawing5, digiDrawing6, digiDrawing7, digiDrawing8],
       progress: blank_prog,
-      layout: 1,
+      layout: 0,
       yt: "",
-      link: "",
+      link: "https://www.instagram.com/world_._builder/",
       git: "",
       location: ""
     },
     {
       title: "Music Composition",
-      description: "I have composed music.",
+      description: "Although my musical training is in the Indian Classical (Carnatic) style, I am in love with Western-style film scoring. I compose music that illustrates stories and captures emotion. \nThe first piece, 'Endless Chase', opens in fragile, tentative steps before swelling into tangled harmonies that press in from all sides. Threads of wonder and nostalgia flicker through the density midway through the piece, only to dissolve into an unresolved cadence, leaving the ear suspended in lingering tangled harmonies. \nThe second piece, 'The Harp and the Firefly', weaves the soundscape of a playful fairytale world. It opens with a delicate layering of chords, joined by the gentle resonance of the harp. Soon, the flute enters, weaving fluid, playful motifs that lend the piece a sense of curiosity, eventually swelling into harmonies that evoke a sense of wonder.",
       skills: "",
-      imgArray: [sketch_1, sketch_3, paintings, sketch_4, faces],//change
+      imgArray: [harp_and_firefly, endless_chase],//change
       progress: blank_prog,
       layout: 1,
       yt: "",
@@ -160,10 +186,10 @@ export const Projects = () => {
     },
     {
       title: "Violin & Dance",
-      description: "I have been playing Indian Classical violin and dancing Bharatanatyam since I was 5! \n I perform violin regularly across the United States and in India. I play solo concerts, accompany vocal artists, and play for dance programs. I play in the Carnatic style, a South Indian music form that centers around two concepts: Shruti (melody) and Laya (rhythm). Lyric-based devotional songs and melodic scales (ragas) are elaborated upon through various forms of improvisation (manodharma). These forms include Alapana, free-flowing raga exploration, Tanam, more rhythm-based swara (note) pattern improvisation, niraval, improvisation on a line of a song, and kalpana swarams, more mathematical exploration that fits into a talam (similar to a time signature). \n Bharatanatyam is one of the oldest classical dance forms of South India. It is a sacred art, performed and nurtured in the temples. Bharathanatyam has four components: Bha- Bhavam (expressions), Ra- Ragam (melody), Tha- Thalam (rhythm), and Natyam (dramatic performance). I completed my dance arangetram (roughly translated to 'graduation') in 2019, and enjoy dancing to this day. \n I have won international awards in both violin and dance. For more information about these art forms, as well as videos of my performances, click on the link icon above!",
+      description: "I have been playing Indian Classical violin and dancing Bharatanatyam since the age of five, earning international recognition in both art forms. \nAs a violinist, I perform in the Carnatic tradition across the United States and in India, both as a soloist and accompanist. I am a member of the award-winning musical ensemble Akshara and have performed at renowned venues including the National Gallery of Art, Lincoln Center, and Carnegie Hall. My adaptability allows me to seamlessly accompany vocalists and dancers nationwide, tailoring my approach to each performance. Carnatic music, rooted in the South Indian concepts of Shruti (melody) and Laya (rhythm), invites improvisation through forms such as Alapana (free raga exploration), Tanam (rhythmic swara patterns), Niraval (melodic improvisation on a lyrical line), and Kalpana Swaras (mathematical note patterns set to a talam, or rhythmic cycle). \n Bharatanatyam is a sacred South Indian classical dance form with the components of Bhavam (expression), Ragam (melody), Thalam (rhythm), and Natyam (dramatic storytelling). I trained extensively since the age of 5 and completed my Bharatanatyam Arangetram ('graduation') in 2019. In addition to classical repertoire, I adapt the storytelling and expressive techniques of Bharatanatyam to acting in plays and thematic productions.\nFor more information about these art forms, as well as videos of my performances, click the link icon above.",
       skills: "Performance • Improvisation • Choreography • Acting",
       imgArray: [violin_1, dance_1, dance_2],//change
-      layout: 1,
+      layout: 0,
       link: ["https://krupacsekhar.wixsite.com/portfolio"],
       progress: blank_prog,
       git: "",
@@ -172,8 +198,8 @@ export const Projects = () => {
 
   const design = [
     {
-      title: "Set Design",
-      description: "I was set designer for a Cornell immersive film installation: THEM. The installation is comprised of a room and a two-paneled projection in the center of the space. This set had to be used both for the filming process, and as a live set that visitors could interact with while watching the films. In addition, the set had to be versatile enough to accomodate four distinct short films, with diverse characters and moods (middle aged bachelors, a young couple, best friends in an argument). After reading the scripts, I recognized common themes of home, nostalgia, and companionship, and chose a warm, earthy color palette and soft, lived-in furniture. We sourced all furniture and props from the Ithaca reuse center, and used paneling and wallpaper to make the space feel lived-in. Our final installation manifested as a needed reprieve from the monotony of university life, allowing visitors to experience the film as if they are living it.",
+      title: "THEM: an immersive film installation",
+      description: "I was set designer for a Cornell immersive film installation: THEM. The installation is comprised of a room and a two-paneled projection in the center of the space. \nThis set had to be used both for the filming process, and as a live set that visitors could interact with while watching the films. In addition, the set had to be versatile enough to accomodate four distinct short films, with diverse characters and moods (middle aged bachelors, a young couple, best friends in an argument). \nAfter reading the scripts, I recognized common themes of home, nostalgia, and companionship, and chose a warm, earthy color palette and soft, lived-in furniture. We sourced all furniture and props from the Ithaca reuse center, and used paneling and wallpaper to make the space feel lived-in. Our final installation manifested as a needed reprieve from the monotony of university life, allowing visitors to experience the film as if they were living it.",
       skills: "",
       imgArray: [them1, them2, them3, them4, them5, them6],//change
       progress: blank_prog,
@@ -181,13 +207,25 @@ export const Projects = () => {
       yt: "",
       link: "",
       git: "",
-      location: ""
+      location: "Lead Set Designer"
     },
     {
       title: "The Jasmine Dragon",
-      description: "Blurb",
+      description: "Inspired by 'Avatar: The Last Airbender,' this project reimagines The Jasmine Dragon, Uncle Iroh’s beloved tea shop in the Earth Kingdom, through the lens of sustainable and culturally grounded design. Iroh’s philosophy of harmony, hospitality, and reflection informs every aspect of this redesign, transforming the space into a sustainable tea shop, café, and vibrant third place that welcomes people from all walks of life. \n The concept draws from my independent study on traditional Chinese architecture, complemented by my current studies in Chinese culture and visual heritage in Beijing. Every element of the design is grounded in research, from spatial layout and materiality to symbolic detailing. This vision balances historical architectural motifs with contemporary functionality, using nature-inspired materials, adaptive reuse strategies, and thoughtful spatial zoning to create an atmosphere of warmth and connection. \nFor a more engaging, in-depth look at my design rationale, material choices, and cultural references, click the link icons above. For a concise visual overview, expand the video on the right.",
       skills: "",
-      imgArray: [them1, them2, them3, them4, them5, them6],//change
+      imgArray: [jdragon],//change
+      progress: blank_prog,
+      layout: 1,
+      yt: "",
+      link: ["https://www.instagram.com/reel/DGRiOSQN75v/?utm_source=ig_web_copy_link&igsh=enQ0Y205bmtzZWVu", "https://www.instagram.com/reel/DHo7We5uVp7/?utm_source=ig_web_copy_link&igsh=MWxoM3dmdDBwNjZjNw=="],
+      git: "",
+      location: "Concept Designer"
+    },
+    {
+      title: "Creative Direction",
+      description: "I served as Shoot Lead for Cornell's CollectiveX Magazine. This involved everything from concept formulation to color palettes, to finding shoot locations and coordinating makeup, hair, and wardrobe, to live direction during the shoot. I've featured two of my shoots: 'Chipping', and 'Laugh Letter'. \n Both of these shoots are based on written pieces. 'Chipping' explores POC and female ostracization through the perspective of a sculpture in a museum. We chose cold, metallic colors to evoke the essence of 'chipping', and focused on collective gaze to emphasize ogle and elicit discomfort. 'Laugh Letter' describes a South Asian girl's journey to embracing her culture. We used warm colors, shadow-light dynamics, and levels to bring this piece to life.",
+      skills: "Project Management",
+      imgArray: [laugh_letter, chipping],//change
       progress: blank_prog,
       layout: 0,
       yt: "",
@@ -197,35 +235,23 @@ export const Projects = () => {
     },
     {
       title: "Bonsai World",
-      description: "Blurb",
+      description: "Bonsai World is a conceptual design exercise that reimagines elements of traditional Asian heritage—its spatial philosophies, craft traditions, and symbolic forms—through the lens of speculative architecture. The project envisions a miniaturized human society living in symbiosis with monumental bonsai ecosystems: living architectures that merge organic growth with built form, fusing centuries-old horticultural practice with innovative ecological design. Miniaturization reduces environmental strain, while the architecture itself becomes a living organism—responsive, adaptive, and deeply tied to its cultural lineage. \n The design draws inspiration from classical Chinese architecture, Japanese bonsai cultivation, and Indian root engineering, reinterpreting these traditions to fit a speculative future set in the year 2503 under the governance of the United Governments of Asia.  \nFormally, the work explores the politics of scale, the poetics of craft, and the evolving dialogue between tradition and innovation. Rather than offering a utopian or dystopian vision, Bonsai World presents an ambiguous, layered narrative that invites reflection: What does ecological harmony demand at a continental scale? Who bears the costs of such integration, and who decides? \nFor my full artist’s statement or to view the project in booklet format, click the link icons above.",
       skills: "",
-      imgArray: [them1, them2, them3, them4, them5, them6],//change
+      imgArray: [bworld_moodboard, bworld1, bworld2, bworld3, bworld4, bworld5, bworld6, bworld7, bworld8, bworld9, bworld10, bworld11, bworld12],//change
       progress: blank_prog,
-      layout: 0,
+      layout: 1,
       yt: "",
-      link: "",
+      link: ["https://drive.google.com/file/d/1JqQ1jvtjp7YHJPCqorSKrVzf5bMbUoZQ/view?usp=sharing", "https://issuu.com/krupacsekhar/docs/bonsai_world"],
       git: "",
-      location: ""
-    },
-    {
-      title: "Creative Direction",
-      description: "I am a Creative Director for Cornell's CollectiveX Magazine. This involves everything from concept formulation to color palettes, to finding shoot locations and coordinating makeup, hair, and wardrobe, to live direction during the shoot. I've featured two of my shoots: 'Chipping', and 'Laugh Letter'. \n Both of these shoots are based on written pieces. 'Chipping' explores POC and female ostracization through the perspective of a sculpture in a museum. We chose cold, metallic colors to evoke the essence of 'chipping', and focused on collective gaze to emphasize ogle and elicit discomfort. 'Laugh Letter' describes a South Asian girl's journey to embracing her culture. We used warm colors, shadow-light dynamics, and levels to bring this piece to life.",
-      skills: "Project Management",
-      imgArray: [laugh_letter, chipping],//change
-      progress: blank_prog,
-      layout: 0,
-      yt: "",
-      link: "",
-      git: "",
-      location: ""
+      location: "Concept Designer"
     }
   ];
 
-  const more = [
+  const writing = [
 
     {
       title: "Research",
-      description: "I enjoy writing research reports that tackle issues of social equality, heritage preservation, and sustainability. I am particularly interested in how our built environment shapes access to services like healthcare and green space, and intersections of architecture with politics, culture, and sustainability. \n The first link is an article I wrote for the Cornell Healthcare Review about how discrimination is built into our healthcare system. The second is the final paper for an independent study I performed examining Chinese vernacular architecture in the context of modernization. The third investigates smart cities and their ability to foster sustainability.",
+      description: "I write research reports that address pressing issues in social equity, heritage preservation, and sustainability. My work often explores how the built environment influences access to essential services such as healthcare and green space, as well as the intersections of architecture with politics, culture, and environmental responsibility. \nThe first linked piece is an article for the Cornell Healthcare Review examining how systemic discrimination is embedded in the U.S. healthcare system. The second is the final paper from an independent study on Chinese vernacular architecture and its adaptation in the face of modernization. The third analyzes smart cities and evaluates their potential to advance sustainable development.",
       skills: "",
       imgArray: [writing_1, writing_2, writing_3],//change
       progress: blank_prog,
@@ -249,7 +275,7 @@ export const Projects = () => {
     },
     {
       title: "Creative: Short Form",
-      description: "Whether personal vignettes like the snapshots you see to the left or nonfiction writing like the health justice piece I wrote for the Cornell Healthcare Review, I love to write. I am in love with the English language and its power to capture, animate, persuade, inform, communicate.",
+      description: "I am in love with the English language and its power to capture, animate, persuade, inform, communicate. To the left are some snapshots of personal vignettes I have written, focused on capturing a sense of place.",
       skills: "Creative Writing • Science Writing • Journalism",
       imgArray: [vignette_1, vignette_2, vignette_3],//change
       progress: blank_prog,
@@ -261,14 +287,27 @@ export const Projects = () => {
     }
   ];
 
+  const CategoryDescription = ({ text }) => (
+    <>
+      <Row className="justify-content-center">
+        <Col md="8" className="d-flex justify-content-center">
+          <div className="proj-desc">{text}</div>
+        </Col>
+      </Row>
+      <div style={{ height: '1rem' }} /> {/* spacer */}
+    </>
+  );
+
   return (
     <section className="project" id="project">
       <Container>
         <Row>
           <Col size={12}>
             <h2>Recent Projects</h2>
+            <div className="spacer">h</div>
+
             <Tab.Container id="projects-tabs" defaultActiveKey="arts">
-              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+              <Nav variant="pills" className="nav-pills mb-3 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
                   <Nav.Link eventKey="tech">Tech</Nav.Link>
                 </Nav.Item>
@@ -279,11 +318,14 @@ export const Projects = () => {
                   <Nav.Link eventKey="design">Design</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="more">Writing</Nav.Link>
+                  <Nav.Link eventKey="writing">Writing</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content>
                 <Tab.Pane eventKey="tech">
+                  <div style={{ height: '1rem' }} /> {/* spacer */}
+                  <CategoryDescription text={"I tinker. Over the past four years, this took the form of a Computer Science degree, where I learned to ideate, design, and code various brainchildren (including this website)! I am an experienced front-end developer, UX researcher/designer, and technical project manager with a passion for leveraging my technical skills to address meaningful issues in creative ways."} />
+                  <div style={{ height: '1rem' }} /> {/* spacer */}
                   <Row>
                     {
                       tech.map((project, index) => {
@@ -298,6 +340,9 @@ export const Projects = () => {
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="arts">
+                  <div style={{ height: '1rem' }} /> {/* spacer */}
+                  <CategoryDescription text={"I create! I love making things with my hands and body— fine art, digital art, music, dance, and most recently, figure skating! I love the process of carefully honing a craft over time; art is like meditation for me. I have been invited to showcase my visual and performing art in venues including Cornell Univerisity art galleries, the National Gallery of Art, the Lincoln Center, and Carnegie Hall."} />
+                  <div style={{ height: '1rem' }} /> {/* spacer */}
                   <Row>
                     {
                       art.map((project, index) => {
@@ -311,6 +356,9 @@ export const Projects = () => {
                     }
                   </Row>                </Tab.Pane>
                 <Tab.Pane eventKey="design">
+                  <div style={{ height: '1rem' }} /> {/* spacer */}
+                  <CategoryDescription text={"I envision— how to tell a story through a space, capture an emotion in a photograph, communicate cultural essence through decor. I approach spatial design as a tool to preserve and revitalize culture and history, guided by principles of reuse, regeneration, and nature-forward thinking. I had the opportunity to intern at sustainable interior design firm AdesignStorie, where I led materials research, drafted sustainability policies for the World Design Organization, and contributed to design concepts for client projects and the Dundee Design Festival. I’m currently studying historic preservation in architectural and urban design in Beijing, China."} />
+                  <div style={{ height: '1rem' }} /> {/* spacer */}
                   <Row>
                     {
                       design.map((project, index) => {
@@ -323,10 +371,13 @@ export const Projects = () => {
                       })
                     }
                   </Row>                </Tab.Pane>
-                <Tab.Pane eventKey="more">
+                <Tab.Pane eventKey="writing">
+                  <div style={{ height: '1rem' }} /> {/* spacer */}
+                  <CategoryDescription text={"I share. My writing is both academic and creative, and it is a way for me to explore things I am most curious about— design, urban planning, culture, nature. I write academic pieces, poems, vignettes, and also recently started an Instagram account and YouTube channel where I share my insights on topics I am curious about."} />
+                  <div style={{ height: '1rem' }} /> {/* spacer */}
                   <Row>
                     {
-                      more.map((project, index) => {
+                      writing.map((project, index) => {
                         return (
                           <ProjectCard
                             key={index}
